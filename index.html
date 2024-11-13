@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide & Show Password</title>
+    <link rel="icon" href="./icons/mylabel.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="form">
+        <label for="password" class="form__label">PASSWORD</label>
+        <div class="input-container">
+            <input 
+            type="password" 
+            name="password" 
+            id="password" 
+            class="form__field"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{12,16}$"
+            title="Password must have at least one digit, an uppercase letter, as well as lowercase letters, be from 12 to 16 characters long and have no special characters."
+            minlength="12"
+            maxlength="16"
+            required
+            >
+            <button type="button" class="icon-btn">
+                <span class="icon-wrapper closed">
+                    <svg class="eye-closed" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 10C4 10 5.6 15 12 15M12 15C18.4 15 20 10 20 10M12 15V18M18 17L16 14.5M6 17L8 14.5" stroke="#464455" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="icon-wrapper opened">
+                    <svg class="eye-opened" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 12C4 12 5.6 7 12 7M12 7C18.4 7 20 12 20 12M12 7V4M18 5L16 7.5M6 5L8 7.5M15 13C15 14.6569 13.6569 16 12 16C10.3431 16 9 14.6569 9 13C9 11.3431 10.3431 10 12 10C13.6569 10 15 11.3431 15 13Z" stroke="#464455" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </button>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
